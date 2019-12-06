@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class PedestrianSpawner : MonoBehaviour
 {
-    public Transform target;
-    public float interval;
-    private float next_spawn_time;
-    public GameObject prefab;
-    // Start is called before the first frame update
-    void Start()
+    public Transform Target;
+    public float Interval;
+    private float nextSpawnTime;
+    public GameObject PedestrianPrefab;
+
+    private void Start()
     {
-        next_spawn_time = Time.time + interval;
+        nextSpawnTime = Interval;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Time.time > next_spawn_time)
+        if (nextSpawnTime <= 0)
         {
-            GameObject new_pedestrian = Instantiate(prefab, transform.parent);
-            new_pedestrian.GetComponent<PedestrianController>().target = target;
-            new_pedestrian.transform.SetParent(gameObject.transform.parent);
-            new_pedestrian.transform.localScale = new Vector3(1f, 1f, 1f);
-            new_pedestrian.transform.position = gameObject.transform.position;
-            next_spawn_time += interval;
+            GameObject newPedestrian = Instantiate(PedestrianPrefab, transform.parent);
+            newPedestrian.GetComponent<PedestrianController>().Target = Target;
+            newPedestrian.transform.SetParent(gameObject.transform.parent);
+            newPedestrian.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            newPedestrian.transform.position = gameObject.transform.position;
+            nextSpawnTime = Interval;
+        }
+        else
+        {
+            nextSpawnTime -= Time.deltaTime;
         }
     }
 }

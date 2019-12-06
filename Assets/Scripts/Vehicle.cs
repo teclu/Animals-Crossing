@@ -7,10 +7,14 @@ public class Vehicle : MonoBehaviour
 {
     public Road PreviousRoad, CurrentRoad;
 
-    private float speed = 1.0f;
+    private float speed = 5.0f;
 
     private void Start()
     {
+        if (CurrentRoad == null)
+        {
+            CurrentRoad = transform.parent.gameObject.GetComponent<VehicleSpawner>().RoadSpawn;
+        }
         transform.position = CurrentRoad.transform.position;
     }
 

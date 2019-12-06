@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7963082509904677704}
   - component: {fileID: 4907501479446936751}
   m_Layer: 5
-  m_Name: Train
+  m_Name: Vehicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,3 +86,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c55238c24879f303b2c20932eddb67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PreviousRoad: {fileID: 0}
+  CurrentRoad: {fileID: 0}
