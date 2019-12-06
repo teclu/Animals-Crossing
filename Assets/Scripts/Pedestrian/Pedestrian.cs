@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Pedestrian : MonoBehaviour
 {
-    //public GameObject destination;
-
     public Transform Target;
     public float FartInterval;
     public Sprite[] avatars;

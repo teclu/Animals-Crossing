@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Vehicle : MonoBehaviour
 {
     public Road PreviousRoad, CurrentRoad;
+    public GameObject ExplosionPrefab;
 
     private float speed = 5.0f;
     private bool isDead;
@@ -93,6 +94,8 @@ public class Vehicle : MonoBehaviour
             isDead = true;
             GetComponent<BoxCollider>().enabled = false;
             Events.instance.Raise(new DeathEvent {Type = DeathEvent.DeathType.Vehicle});
+            GameObject explosion = Instantiate(ExplosionPrefab, transform);
+            explosion.transform.SetParent(transform.parent);
         }
     }
 }
