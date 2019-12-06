@@ -8,16 +8,19 @@ public class Pedestrian : MonoBehaviour
     //public GameObject destination;
 
     public Transform Target;
-    public float SmoothTime = 12.0f;
+    public float FartInterval;
     public Sprite[] avatars;
+    public GameObject fartPrefab;
     private Vector3 velocity = Vector3.zero, startPosition, targetPosition;
     private bool isDead;
+    private float SmoothTime = 3.5f, fartInterval;
 
     private void Start()
     {
         startPosition = transform.position;
         targetPosition = Target.position;
         isDead = false;
+        fartInterval = 0.0f;
         Image image = GetComponent<Image>();
         image.sprite = avatars[new System.Random().Next(0, avatars.Length - 1)];
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
@@ -33,6 +36,17 @@ public class Pedestrian : MonoBehaviour
         if (isDead)
         {
             FadeOut();
+            transform.Rotate(new Vector3(0, 0, 1), Time.deltaTime * new System.Random().Next(-960, 960));
+            if (fartInterval <= 0)
+            {
+                GameObject fart = Instantiate(fartPrefab, transform);
+                fart.transform.SetParent(transform.parent);
+                fartInterval = FartInterval;
+            }
+            else
+            {
+                fartInterval -= Time.deltaTime;
+            }
             return;
         }
 
@@ -59,8 +73,8 @@ public class Pedestrian : MonoBehaviour
     private void FadeOut()
     {
         Image image = GetComponent<Image>();
-        image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 1.0f);
-        if (image.color.a == 0.0f)
+        image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 2.0f);
+        if (image.color.a < 0.05f)
         {
             Destroy(this.gameObject);
         }
@@ -72,7 +86,6 @@ public class Pedestrian : MonoBehaviour
         {
             isDead = true;
             Events.instance.Raise(new DeathEvent {Type = DeathEvent.DeathType.Pedestrian});
-            GetComponent<Image>().sprite = avatars[avatars.Length - 1];
         }
     }
 }

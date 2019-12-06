@@ -53,12 +53,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  SmoothTime: 3
+  FartInterval: 0.125
   avatars:
-  - {fileID: 21300000, guid: 202c7dccb80582bbda29338d81343cdb, type: 3}
-  - {fileID: 21300000, guid: 071467fcd1cf3263e82a5c27dc4f9b5d, type: 3}
-  - {fileID: 21300000, guid: 3f22196accbd95bbb93bba9a0d0dead8, type: 3}
-  - {fileID: 21300000, guid: bc259b8a5d0935183a789ded9af1cd4c, type: 3}
+  - {fileID: 21300000, guid: d93f6f8152d8bdea5b2154af25a559bf, type: 3}
+  - {fileID: 21300000, guid: 6a430545ca9209621b54094fb36d685a, type: 3}
+  - {fileID: 21300000, guid: 92336a078d9acd7df97c311a8cae7b23, type: 3}
+  - {fileID: 21300000, guid: cc8a9c3740d596149874b7e74630713f, type: 3}
+  - {fileID: 21300000, guid: 20a56adcfcfbc26cc8dedc262deca892, type: 3}
+  - {fileID: 21300000, guid: ba7f306d368f2757c88dcd87b157f570, type: 3}
+  - {fileID: 21300000, guid: 4f4682ec2bc2b7c29898df2b0e5c6fe4, type: 3}
+  - {fileID: 21300000, guid: e070473ce6dbf9635bfc4786e5ed5509, type: 3}
+  - {fileID: 21300000, guid: d27fa73f1e055c83baf3406fb58ad98c, type: 3}
+  - {fileID: 21300000, guid: afdea7ceccaea2ef58966092e83ccfc0, type: 3}
+  - {fileID: 21300000, guid: 6dae2d73a6a170e9ea2075489d14d5e6, type: 3}
+  - {fileID: 21300000, guid: e92997ec1751b086cae237452bef4a0d, type: 3}
+  - {fileID: 21300000, guid: a5b6b42dffc4bd2e68e161f28b420b8d, type: 3}
+  - {fileID: 21300000, guid: f45982151279ca96cb651d6fa393d1fa, type: 3}
+  - {fileID: 21300000, guid: b734a8ab49ed297bcaa1a8bcece381d8, type: 3}
+  - {fileID: 21300000, guid: d8521656bc13624499a14efd521a6439, type: 3}
+  - {fileID: 21300000, guid: d83b76ff3cd6aba8f9893757d105a93d, type: 3}
+  - {fileID: 21300000, guid: 83a63a11ab9ce2840831471ab45af60a, type: 3}
+  - {fileID: 21300000, guid: 4d9e79aa5268ac49fad61259d77c9b84, type: 3}
+  - {fileID: 21300000, guid: 7fe557d52d00e4d918c4a930021ee958, type: 3}
+  - {fileID: 21300000, guid: 2859be27d934e4f91bee56e4c31908c3, type: 3}
+  - {fileID: 21300000, guid: ba459e210cfa65ffdb2c32e94f9a216a, type: 3}
+  - {fileID: 21300000, guid: 19df60efe356464b5a964d4328b3ab70, type: 3}
+  - {fileID: 21300000, guid: 194a99ec9e5634955a4bf4ec500eff81, type: 3}
+  - {fileID: 21300000, guid: 7a2714b1b003f695f9b403ae451682d0, type: 3}
+  - {fileID: 21300000, guid: c1efced12ca732d3a80a5255b39494b1, type: 3}
+  - {fileID: 21300000, guid: 0584f216ddbdcf7489601af368090fe6, type: 3}
+  - {fileID: 21300000, guid: d8ddf3d436a3bf0b09586f87867ab3ca, type: 3}
+  - {fileID: 21300000, guid: 7d4db5f1d7dda167ba8080ab568f97bc, type: 3}
+  - {fileID: 21300000, guid: 1b0754a01b5b41aa88db3a059addd145, type: 3}
+  fartPrefab: {fileID: 1821857201371937838, guid: a5d5685400bf7b00094e610448c03a8f,
+    type: 3}
 --- !u!222 &6403335948833393064
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -85,7 +113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 202c7dccb80582bbda29338d81343cdb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5b6b42dffc4bd2e68e161f28b420b8d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

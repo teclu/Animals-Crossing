@@ -31,7 +31,7 @@ public class Vehicle : MonoBehaviour
         {
             Image image = GetComponentInChildren<Image>();
             image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 1.0f);
-            if (image.color.a == 0.0f)
+            if (image.color.a < 0.05f)
             {
                 Destroy(this.gameObject);
             }
@@ -93,7 +93,6 @@ public class Vehicle : MonoBehaviour
             isDead = true;
             GetComponent<BoxCollider>().enabled = false;
             Events.instance.Raise(new DeathEvent {Type = DeathEvent.DeathType.Vehicle});
-            // To Be Done: GetComponent<Image>().sprite = avatars[avatars.Length - 1];
         }
     }
 }
