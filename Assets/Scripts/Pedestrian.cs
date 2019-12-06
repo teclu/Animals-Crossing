@@ -50,6 +50,7 @@ public class Pedestrian : MonoBehaviour
         if (collision.gameObject.tag == "Vehicle" && !isDead)
         {
             isDead = true;
+            Events.instance.Raise(new DeathEvent {Type = DeathEvent.DeathType.Pedestrian});
             GetComponent<Image>().sprite = avatars[avatars.Length - 1];
         }
     }

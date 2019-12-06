@@ -92,6 +92,7 @@ public class Vehicle : MonoBehaviour
         {
             isDead = true;
             GetComponent<BoxCollider>().enabled = false;
+            Events.instance.Raise(new DeathEvent {Type = DeathEvent.DeathType.Vehicle});
             // To Be Done: GetComponent<Image>().sprite = avatars[avatars.Length - 1];
         }
     }
