@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class PedestrianFart : MonoBehaviour
 {
-    public Sprite[] farts;
+    public Sprite[] Farts;
+    public AudioSource FartAudioSource;
 
     private void Start()
     {
-        GetComponent<Image>().sprite = farts[new System.Random().Next(0, farts.Length - 1)];
+        GetComponent<Image>().sprite = Farts[new System.Random().Next(0, Farts.Length - 1)];
+        FartAudioSource = Instantiate(FartAudioSource, transform);
     }
 
     private void Update()

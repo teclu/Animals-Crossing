@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8d544306e2a39bda8cbf6eb804ada3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionAudioSource: {fileID: 961484390721316578, guid: 737731069a433debabd96a3d816d2e2b,
+    type: 3}
 --- !u!222 &1120275680705509662
 CanvasRenderer:
   m_ObjectHideFlags: 0

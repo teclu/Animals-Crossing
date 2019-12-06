@@ -7,8 +7,9 @@ public class Pedestrian : MonoBehaviour
 {
     public Transform Target;
     public float FartInterval;
-    public Sprite[] avatars;
-    public GameObject fartPrefab;
+    public Sprite[] Avatars;
+    public GameObject FartPrefab;
+    public AudioSource DeathAudioSource;
     private Vector3 velocity = Vector3.zero, startPosition, targetPosition;
     private bool isDead;
     private float SmoothTime = 3.5f, fartInterval;
@@ -20,7 +21,7 @@ public class Pedestrian : MonoBehaviour
         isDead = false;
         fartInterval = 0.0f;
         Image image = GetComponent<Image>();
-        image.sprite = avatars[new System.Random().Next(0, avatars.Length - 1)];
+        image.sprite = Avatars[new System.Random().Next(0, Avatars.Length - 1)];
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
     }
 
@@ -37,7 +38,7 @@ public class Pedestrian : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, 1), Time.deltaTime * new System.Random().Next(-960, 960));
             if (fartInterval <= 0)
             {
-                GameObject fart = Instantiate(fartPrefab, transform);
+                GameObject fart = Instantiate(FartPrefab, transform);
                 fart.transform.SetParent(transform.parent);
                 fartInterval = FartInterval;
             }
@@ -71,7 +72,7 @@ public class Pedestrian : MonoBehaviour
     private void FadeOut()
     {
         Image image = GetComponent<Image>();
-        image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 2.0f);
+        image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * DeathAudioSource.clip.length);
         if (image.color.a < 0.05f)
         {
             Destroy(this.gameObject);
@@ -84,6 +85,7 @@ public class Pedestrian : MonoBehaviour
         {
             isDead = true;
             Events.instance.Raise(new DeathEvent {Type = DeathEvent.DeathType.Pedestrian});
+            DeathAudioSource = Instantiate(DeathAudioSource, transform);
         }
     }
 }

@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class VehicleExplosion : MonoBehaviour
 {
+    public AudioSource ExplosionAudioSource;
+
     private void Start()
     {
         transform.localScale = new Vector3(0, 0, 0);
+        ExplosionAudioSource = Instantiate(ExplosionAudioSource, transform);
     }
 
     private void Update()

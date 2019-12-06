@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c019292281ee4b8c9e3f2558117df47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  farts:
+  Farts:
   - {fileID: 21300000, guid: 56bbe698396da7065985d2b7492874ed, type: 3}
   - {fileID: 21300000, guid: aafbe02263b36749d943a858a555b376, type: 3}
   - {fileID: 21300000, guid: 8f54f903657651515b199e1c79d95cc7, type: 3}
@@ -60,6 +60,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0b3755a45758f80e3a5da6ca2d4133a5, type: 3}
   - {fileID: 21300000, guid: 7d42a1bbceab22726a0bb1dd31abc4f1, type: 3}
   - {fileID: 21300000, guid: 1b91a1574283dd749bc2147406a97ad3, type: 3}
+  FartAudioSource: {fileID: 3591144571937793635, guid: d2db653ad3e4cb083b56fac7abd07add,
+    type: 3}
 --- !u!222 &4051418608246827568
 CanvasRenderer:
   m_ObjectHideFlags: 0

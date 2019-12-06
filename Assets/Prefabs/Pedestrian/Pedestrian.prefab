@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   FartInterval: 0.125
-  avatars:
+  Avatars:
   - {fileID: 21300000, guid: d93f6f8152d8bdea5b2154af25a559bf, type: 3}
   - {fileID: 21300000, guid: 6a430545ca9209621b54094fb36d685a, type: 3}
   - {fileID: 21300000, guid: 92336a078d9acd7df97c311a8cae7b23, type: 3}
@@ -85,7 +85,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d8ddf3d436a3bf0b09586f87867ab3ca, type: 3}
   - {fileID: 21300000, guid: 7d4db5f1d7dda167ba8080ab568f97bc, type: 3}
   - {fileID: 21300000, guid: 1b0754a01b5b41aa88db3a059addd145, type: 3}
-  fartPrefab: {fileID: 1821857201371937838, guid: a5d5685400bf7b00094e610448c03a8f,
+  FartPrefab: {fileID: 1821857201371937838, guid: a5d5685400bf7b00094e610448c03a8f,
+    type: 3}
+  DeathAudioSource: {fileID: 5665370406616392717, guid: 90df45405e9dc73499eee70b5390cf26,
     type: 3}
 --- !u!222 &6403335948833393064
 CanvasRenderer:

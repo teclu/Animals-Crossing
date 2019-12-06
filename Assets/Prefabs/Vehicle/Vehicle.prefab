@@ -64,6 +64,8 @@ MonoBehaviour:
   CurrentRoad: {fileID: 0}
   ExplosionPrefab: {fileID: 7309895507260240364, guid: 6b044357c500ab03da3bc7bd137d0dba,
     type: 3}
+  DeathAudioSource: {fileID: 8438445860099658088, guid: db3aad43e3b180672834306726e7b5f8,
+    type: 3}
 --- !u!54 &8688364605863103194
 Rigidbody:
   m_ObjectHideFlags: 0
