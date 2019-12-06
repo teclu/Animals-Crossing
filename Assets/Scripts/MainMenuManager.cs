@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public GameObject TitleScreen, CreditsScreen;
+    public GameObject TitleScreen, InstructionsScreen, CreditsScreen;
 
     private void Start()
     {
@@ -18,6 +18,12 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("Level_1");
     }
 
+    public void OnClickInstructions()
+    {
+        TitleScreen.SetActive(false);
+        InstructionsScreen.SetActive(true);
+    }
+
     public void OnClickCredits()
     {
         TitleScreen.SetActive(false);
@@ -28,6 +34,7 @@ public class MainMenuManager : MonoBehaviour
     {
         TitleScreen.SetActive(true);
         CreditsScreen.SetActive(false);
+        InstructionsScreen.SetActive(false);
     }
 
     public void OnClickQuit()
