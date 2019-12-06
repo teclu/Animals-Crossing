@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 6958881250992574520}
   - component: {fileID: 120045405232844243}
   - component: {fileID: 722537610202101262}
+  - component: {fileID: 6892876056334685886}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -622,6 +623,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6892876056334685886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3568675049360909656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e5d60c701a526bda098e657d0def84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonHoverSound: {fileID: 6173962557296627541, guid: 1d4218444cfe71a6bb2b1760158814ab,
+    type: 3}
+  ButtonClickSound: {fileID: 6173962557296627541, guid: 7e0546f29efce9f379110ed6dc55e8bb,
+    type: 3}
 --- !u!1 &3652708705728232292
 GameObject:
   m_ObjectHideFlags: 0

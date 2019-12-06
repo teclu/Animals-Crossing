@@ -11,10 +11,13 @@ public class ButtonHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void Start()
     {
-        ButtonHoverSound = Instantiate(ButtonHoverSound, transform);
-        ButtonClickSound = Instantiate(ButtonClickSound, transform);
+        ButtonHoverSound = Instantiate(ButtonHoverSound, transform.parent.parent);
+        ButtonClickSound = Instantiate(ButtonClickSound, transform.parent.parent);
         buttonText = GetComponentInChildren<TextMeshProUGUI>();
-        buttonText.color = Color.yellow;
+        if (buttonText != null)
+        {
+            buttonText.color = Color.yellow;
+        }
     }
 
     private void OnEnable()
@@ -22,31 +25,44 @@ public class ButtonHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (buttonText == null)
         {
             buttonText = GetComponentInChildren<TextMeshProUGUI>();
+            if (buttonText != null)
+            {
+                buttonText.color = Color.yellow;
+            }
         }
-        buttonText.color = Color.yellow;
     }
 
     private void OnDisable()
     {
-        buttonText.color = Color.yellow;
+        if (buttonText != null)
+        {
+            buttonText.color = Color.yellow;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
-        buttonText.color = Color.gray;
+        if (buttonText != null)
+        {
+            buttonText.color = Color.gray;
+        }
         ButtonHoverSound.Play();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        buttonText.color = Color.yellow;
+        if (buttonText != null)
+        {
+            buttonText.color = Color.yellow;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("?");
-        buttonText.color = Color.gray;
+        if (buttonText != null)
+        {
+            buttonText.color = Color.gray;
+        }
         ButtonClickSound.Play();
     }
 }
