@@ -17,7 +17,6 @@ public class CurvedRoad : Road
 
     public void OnClick()
     {
-        Debug.Log("YO");
         if (IsToggable)
         {
             ToggleRotate = !ToggleRotate;
