@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class Track : MonoBehaviour
+public class Road : MonoBehaviour
 {
-    public Track TrackA, TrackB;
+    public Road RoadA, RoadB;
     public Transform Node;
     public bool IsCurved;
 }

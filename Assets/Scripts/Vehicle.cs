@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Train : MonoBehaviour
+public class Vehicle : MonoBehaviour
 {
-    public Track PreviousTrack, CurrentTrack;
+    public Road PreviousRoad, CurrentRoad;
 
     private float speed = 5.0f;
 
     private void Start()
     {
-        if (PreviousTrack == null && CurrentTrack != null)
+        if (PreviousRoad == null && CurrentRoad != null)
         {
-            PreviousTrack = CurrentTrack;
+            PreviousRoad = CurrentRoad;
         }
     }
 
     private void Update()
     {
-        if (CurrentTrack == null)
+        if (CurrentRoad == null)
         {
             Image image = GetComponent<Image>();
             image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - 1.0f * Time.deltaTime);
@@ -31,12 +31,12 @@ public class Train : MonoBehaviour
         }
 
         float step =  speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, CurrentTrack.Node.position, step);
-        if (Vector3.Distance(transform.position, CurrentTrack.Node.position) < 0.001f)
+        transform.position = Vector3.MoveTowards(transform.position, CurrentRoad.Node.position, step);
+        if (Vector3.Distance(transform.position, CurrentRoad.Node.position) < 0.001f)
         {
-            Track tempTrack = CurrentTrack;
-            CurrentTrack = (PreviousTrack == CurrentTrack.TrackA) ? CurrentTrack.TrackB : CurrentTrack.TrackA;
-            PreviousTrack = tempTrack;
+            Road tempRoad = CurrentRoad;
+            CurrentRoad = (PreviousRoad == CurrentRoad.RoadA) ? CurrentRoad.RoadB : CurrentRoad.RoadA;
+            PreviousRoad = tempRoad;
         }
     }
 }
