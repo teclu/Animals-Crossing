@@ -8,6 +8,7 @@ public class Vehicle : MonoBehaviour
     public Road PreviousRoad, CurrentRoad;
 
     private float speed = 5.0f;
+    private bool isDead;
 
     private void Start()
     {
@@ -16,10 +17,22 @@ public class Vehicle : MonoBehaviour
             CurrentRoad = transform.parent.gameObject.GetComponent<VehicleSpawner>().RoadSpawn;
         }
         transform.position = CurrentRoad.transform.position;
+        isDead = false;
     }
 
     private void Update()
     {
+        if (isDead)
+        {
+            Image image = GetComponentInChildren<Image>();
+            image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 1.0f);
+            if (image.color.a == 0.0f)
+            {
+                Destroy(this.gameObject);
+            }
+            return;
+        }
+
         if (CurrentRoad == null)
         {
             Destroy(this.gameObject);
@@ -60,6 +73,16 @@ public class Vehicle : MonoBehaviour
                 CurrentRoad = (PreviousRoad == mergeRoad.RoadA1 || PreviousRoad == mergeRoad.RoadA2) ? mergeRoad.RoadB : mergeRoad.RoadA1;
             }
             PreviousRoad = tempRoad;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Vehicle" && !isDead)
+        {
+            isDead = true;
+            GetComponent<BoxCollider>().enabled = false;
+            // To Be Done: GetComponent<Image>().sprite = avatars[avatars.Length - 1];
         }
     }
 }
