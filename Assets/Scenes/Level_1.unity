@@ -178,7 +178,8 @@ MonoBehaviour:
   - {fileID: 1122129438}
   - {fileID: 163705590}
   - {fileID: 176812724}
-  Interval: 1
+  SwapSpawnerInterval: 5
+  SpawnerInterval: 1
 --- !u!1001 &82504103
 PrefabInstance:
   m_ObjectHideFlags: 0

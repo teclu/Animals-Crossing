@@ -6,8 +6,7 @@ public class CurvedRoad : Road
 {
     public Road RoadA, RoadB1, RoadB2;
     public bool IsToggable, ToggleRotate;
-    public GameObject ToggleSprite;
-    public GameObject RoadSprite;
+    public GameObject ToggleSprite, RoadSprite;
     
     private void Start()
     {
@@ -21,6 +20,7 @@ public class CurvedRoad : Road
         {
             ToggleRotate = !ToggleRotate;
             RoadSprite.transform.Rotate(Vector3.forward, (ToggleRotate) ? -90.0f : 90.0f);
+            Node.transform.Rotate(Vector3.forward, (ToggleRotate) ? -180.0f : 180.0f);
         }
     }
 }

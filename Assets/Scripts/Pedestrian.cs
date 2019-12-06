@@ -8,7 +8,8 @@ public class Pedestrian : MonoBehaviour
     //public GameObject destination;
 
     public Transform Target;
-    public float SmoothTime = 3.0f;
+    public float SmoothTime = 12.0f;
+    public Sprite[] avatars;
     private Vector3 velocity = Vector3.zero, targetPosition;
     private bool isDead;
 
@@ -16,6 +17,7 @@ public class Pedestrian : MonoBehaviour
     {
         targetPosition = Target.position;
         isDead = false;
+        GetComponent<Image>().sprite = avatars[new System.Random().Next(0, avatars.Length - 1)];
     }
 
     private void Update()
@@ -43,6 +45,7 @@ public class Pedestrian : MonoBehaviour
         if (collision.gameObject.tag == "Vehicle" && !isDead)
         {
             isDead = true;
+            GetComponent<Image>().sprite = avatars[avatars.Length - 1];
         }
     }
 }

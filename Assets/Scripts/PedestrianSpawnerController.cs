@@ -5,28 +5,35 @@ using UnityEngine;
 public class PedestrianSpawnerController : MonoBehaviour
 {
     public PedestrianSpawner[] pedestrianSpawners;
-    public float Interval;
+    public float SwapSpawnerInterval;
+    public float SpawnerInterval;
 
-    private float nextSpawnTime;
+    private float nextSwapSpawnerInterval;
+    private float nextSpawnerInterval;
+    private int spawnerIndex;
     private System.Random rngesus;
 
     private void Start()
     {
-        nextSpawnTime = Interval;
+        nextSwapSpawnerInterval = SwapSpawnerInterval;
+        nextSpawnerInterval = SpawnerInterval;
         rngesus = new System.Random();
+        spawnerIndex = rngesus.Next(0, pedestrianSpawners.Length - 1);
     }
 
     private void Update()
     {
-        if (nextSpawnTime <= 0.0f)
+        if (nextSwapSpawnerInterval <= 0.0f)
         {
-            int index = rngesus.Next(0, pedestrianSpawners.Length);
-            pedestrianSpawners[index].SpawnPedestrian();
-            nextSpawnTime = Interval;
+            spawnerIndex = rngesus.Next(0, pedestrianSpawners.Length - 1);
+            nextSwapSpawnerInterval = SwapSpawnerInterval;
         }
-        else
+        if (nextSpawnerInterval <= 0.0f)
         {
-            nextSpawnTime -= Time.deltaTime;
+            pedestrianSpawners[spawnerIndex].SpawnPedestrian();
+            nextSpawnerInterval = SpawnerInterval;
         }
+        nextSwapSpawnerInterval -= Time.deltaTime;
+        nextSpawnerInterval -= Time.deltaTime;
     }
 }

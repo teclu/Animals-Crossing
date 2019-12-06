@@ -54,6 +54,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   SmoothTime: 3
+  avatars:
+  - {fileID: 21300000, guid: 202c7dccb80582bbda29338d81343cdb, type: 3}
+  - {fileID: 21300000, guid: 071467fcd1cf3263e82a5c27dc4f9b5d, type: 3}
+  - {fileID: 21300000, guid: 3f22196accbd95bbb93bba9a0d0dead8, type: 3}
+  - {fileID: 21300000, guid: bc259b8a5d0935183a789ded9af1cd4c, type: 3}
 --- !u!222 &6403335948833393064
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -75,12 +80,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.056383133, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 202c7dccb80582bbda29338d81343cdb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
