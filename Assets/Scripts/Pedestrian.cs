@@ -22,6 +22,11 @@ public class Pedestrian : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenuManager.isGamePaused)
+        {
+            return;
+        }
+
         if (isDead)
         {
             Image image = GetComponent<Image>();

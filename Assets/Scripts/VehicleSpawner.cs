@@ -16,6 +16,11 @@ public class VehicleSpawner : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenuManager.isGamePaused)
+        {
+            return;
+        }
+
         if (nextSpawnTime <= 0)
         {
             GameObject newVehicle = Instantiate(VehiclePrefab, transform);

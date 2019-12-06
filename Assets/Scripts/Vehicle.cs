@@ -22,6 +22,11 @@ public class Vehicle : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenuManager.isGamePaused)
+        {
+            return;
+        }
+
         if (isDead)
         {
             Image image = GetComponentInChildren<Image>();

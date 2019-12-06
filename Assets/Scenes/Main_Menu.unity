@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 560911028}
   - component: {fileID: 560911027}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,7 +1077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &577510300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 1686652309}
   - component: {fileID: 1686652308}
   m_Layer: 5
-  m_Name: Credits
+  m_Name: Credits Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

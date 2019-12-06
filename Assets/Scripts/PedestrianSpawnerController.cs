@@ -24,6 +24,11 @@ public class PedestrianSpawnerController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenuManager.isGamePaused)
+        {
+            return;
+        }
+
         if (nextSwapSpawnerInterval <= 0.0f)
         {
             spawnerIndex = rngesus.Next(0, pedestrianSpawners.Length);
