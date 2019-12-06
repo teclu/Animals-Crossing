@@ -19,6 +19,8 @@ public class Vehicle : MonoBehaviour
         }
         transform.position = CurrentRoad.transform.position;
         isDead = false;
+        Image image = GetComponentInChildren<Image>();
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
     }
 
     private void Update()
@@ -28,20 +30,9 @@ public class Vehicle : MonoBehaviour
             return;
         }
 
-        if (isDead)
+        if (isDead || CurrentRoad == null)
         {
-            Image image = GetComponentInChildren<Image>();
-            image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 1.0f);
-            if (image.color.a < 0.05f)
-            {
-                Destroy(this.gameObject);
-            }
-            return;
-        }
-
-        if (CurrentRoad == null)
-        {
-            Destroy(this.gameObject);
+            FadeOut();
             return;
         }
 
@@ -84,6 +75,29 @@ public class Vehicle : MonoBehaviour
                 CurrentRoad = (slipRoad.ToggleRotate) ? slipRoad.RoadB1 : slipRoad.RoadB2;
             }
             PreviousRoad = tempRoad;
+        }
+        else
+        {
+            FadeIn();
+        }
+    }
+
+    private void FadeIn()
+    {
+        Image image = GetComponentInChildren<Image>();
+        if (image.color.a < 1.0f)
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a + Time.deltaTime * 3.0f);
+        }
+    }
+
+    private void FadeOut()
+    {
+        Image image = GetComponentInChildren<Image>();
+        image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 3.0f);
+        if (image.color.a < 0.05f)
+        {
+            Destroy(this.gameObject);
         }
     }
 
