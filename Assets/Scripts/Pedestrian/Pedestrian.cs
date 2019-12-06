@@ -10,14 +10,17 @@ public class Pedestrian : MonoBehaviour
     public Transform Target;
     public float SmoothTime = 12.0f;
     public Sprite[] avatars;
-    private Vector3 velocity = Vector3.zero, targetPosition;
+    private Vector3 velocity = Vector3.zero, startPosition, targetPosition;
     private bool isDead;
 
     private void Start()
     {
+        startPosition = transform.position;
         targetPosition = Target.position;
         isDead = false;
-        GetComponent<Image>().sprite = avatars[new System.Random().Next(0, avatars.Length - 1)];
+        Image image = GetComponent<Image>();
+        image.sprite = avatars[new System.Random().Next(0, avatars.Length - 1)];
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
     }
 
     private void Update()
@@ -29,19 +32,37 @@ public class Pedestrian : MonoBehaviour
 
         if (isDead)
         {
-            Image image = GetComponent<Image>();
-            image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 1.0f);
-            if (image.color.a == 0.0f)
-            {
-                Destroy(this.gameObject);
-            }
+            FadeOut();
             return;
         }
 
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime);
         if (Vector3.Distance(targetPosition, transform.position) <= 1.0f)
         {
-            Destroy(gameObject);
+            FadeOut();
+        }
+        else
+        {
+            FadeIn();
+        }
+    }
+
+    private void FadeIn()
+    {
+        Image image = GetComponent<Image>();
+        if (image.color.a < 1.0f)
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a + Time.deltaTime * 2.0f);
+        }
+    }
+
+    private void FadeOut()
+    {
+        Image image = GetComponent<Image>();
+        image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - Time.deltaTime * 1.0f);
+        if (image.color.a == 0.0f)
+        {
+            Destroy(this.gameObject);
         }
     }
 

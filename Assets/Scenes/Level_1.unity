@@ -145,7 +145,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18003042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -153,8 +153,8 @@ RectTransform:
   - {fileID: 475075450}
   - {fileID: 272228354}
   - {fileID: 1606512524}
-  m_Father: {fileID: 1979126054}
-  m_RootOrder: 2
+  m_Father: {fileID: 829899053}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1033,12 +1033,12 @@ PrefabInstance:
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
@@ -2196,12 +2196,12 @@ PrefabInstance:
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
@@ -3368,6 +3368,37 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 819390229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &829899052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829899053}
+  m_Layer: 0
+  m_Name: Pedestrian Spawners Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &829899053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829899052}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 915.5223}
+  m_Children:
+  - {fileID: 18003043}
+  m_Father: {fileID: 1979126054}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &857075800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5031,12 +5062,12 @@ PrefabInstance:
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
@@ -5614,7 +5645,7 @@ RectTransform:
   m_Children:
   - {fileID: 429461561}
   - {fileID: 2834590724812141041}
-  - {fileID: 18003043}
+  - {fileID: 829899053}
   - {fileID: 1879631068}
   - {fileID: 270720722}
   m_Father: {fileID: 0}
@@ -6381,12 +6412,12 @@ PrefabInstance:
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5688843087501339046, guid: 8fd9193069943df6d92ea4e0feb9063a,
         type: 3}
