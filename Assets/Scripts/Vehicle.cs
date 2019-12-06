@@ -54,6 +54,11 @@ public class Vehicle : MonoBehaviour
                     CurrentRoad = (PreviousRoad == curvedRoad.RoadA) ? ((curvedRoad.RoadB1 != null) ? curvedRoad.RoadB1 : curvedRoad.RoadB2) : curvedRoad.RoadA;
                 }
             }
+            else if (CurrentRoad.Type == RoadType.Merge)
+            {
+                MergeRoad mergeRoad = (MergeRoad)CurrentRoad;
+                CurrentRoad = (PreviousRoad == mergeRoad.RoadA1 || PreviousRoad == mergeRoad.RoadA2) ? mergeRoad.RoadB : mergeRoad.RoadA1;
+            }
             PreviousRoad = tempRoad;
         }
     }

@@ -11,5 +11,6 @@ public class Road : MonoBehaviour
 public enum RoadType
 {
     Straight,
-    Curved
+    Curved,
+    Merge
 }
