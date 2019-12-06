@@ -28,9 +28,8 @@ public class Vehicle : MonoBehaviour
 
         float step =  speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, CurrentRoad.Node.position, step);
-
-        //transform.rotation = Quaternion.AngleAxis(45, new Vector3(0, 0, 1));
-        
+        Quaternion rotateTo = (PreviousRoad == null) ? CurrentRoad.Node.rotation : PreviousRoad.Node.rotation;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, 512.0f * Time.deltaTime);
         if (Vector3.Distance(transform.position, CurrentRoad.Node.position) < 0.001f)
         {
             Road tempRoad = CurrentRoad;
