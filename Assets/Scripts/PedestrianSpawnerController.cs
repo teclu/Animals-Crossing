@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,15 +18,15 @@ public class PedestrianSpawnerController : MonoBehaviour
     {
         nextSwapSpawnerInterval = SwapSpawnerInterval;
         nextSpawnerInterval = SpawnerInterval;
-        rngesus = new System.Random();
-        spawnerIndex = rngesus.Next(0, pedestrianSpawners.Length - 1);
+        rngesus = new System.Random((int)DateTime.Now.Ticks + this.GetInstanceID());
+        spawnerIndex = rngesus.Next(0, pedestrianSpawners.Length);
     }
 
     private void Update()
     {
         if (nextSwapSpawnerInterval <= 0.0f)
         {
-            spawnerIndex = rngesus.Next(0, pedestrianSpawners.Length - 1);
+            spawnerIndex = rngesus.Next(0, pedestrianSpawners.Length);
             nextSwapSpawnerInterval = SwapSpawnerInterval;
         }
         if (nextSpawnerInterval <= 0.0f)
