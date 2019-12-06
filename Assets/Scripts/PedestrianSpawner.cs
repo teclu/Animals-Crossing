@@ -21,7 +21,7 @@ public class PedestrianSpawner : MonoBehaviour
         {
             GameObject new_pedestrian = Instantiate(prefab, transform.parent);
             new_pedestrian.GetComponent<PedestrianController>().target = target;
-            new_pedestrian.transform.parent = gameObject.transform.parent;
+            new_pedestrian.transform.SetParent(gameObject.transform.parent);
             new_pedestrian.transform.localScale = new Vector3(1f, 1f, 1f);
             new_pedestrian.transform.position = gameObject.transform.position;
             next_spawn_time += interval;

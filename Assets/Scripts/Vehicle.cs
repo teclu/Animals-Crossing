@@ -7,26 +7,18 @@ public class Vehicle : MonoBehaviour
 {
     public Road PreviousRoad, CurrentRoad;
 
-    private float speed = 5.0f;
+    private float speed = 1.0f;
 
     private void Start()
     {
-        if (PreviousRoad == null && CurrentRoad != null)
-        {
-            PreviousRoad = CurrentRoad;
-        }
+        transform.position = CurrentRoad.transform.position;
     }
 
     private void Update()
     {
         if (CurrentRoad == null)
         {
-            Image image = GetComponent<Image>();
-            image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - 1.0f * Time.deltaTime);
-            if (image.color.a == 0.0f)
-            {
-                GameObject.Destroy(this.gameObject);
-            }
+            Destroy(this.gameObject);
             return;
         }
 
@@ -35,7 +27,27 @@ public class Vehicle : MonoBehaviour
         if (Vector3.Distance(transform.position, CurrentRoad.Node.position) < 0.001f)
         {
             Road tempRoad = CurrentRoad;
-            CurrentRoad = (PreviousRoad == CurrentRoad.RoadA) ? CurrentRoad.RoadB : CurrentRoad.RoadA;
+            if (CurrentRoad.Type == RoadType.Straight)
+            {
+                StraightRoad straightRoad = (StraightRoad) CurrentRoad;
+                CurrentRoad = (PreviousRoad == straightRoad.RoadA) ? straightRoad.RoadB : straightRoad.RoadA;
+            }
+            else if (CurrentRoad.Type == RoadType.Curved)
+            {
+                CurvedRoad curvedRoad = (CurvedRoad) CurrentRoad;
+                if (PreviousRoad == curvedRoad.RoadB1 || PreviousRoad == curvedRoad.RoadB2)
+                {
+                    CurrentRoad = curvedRoad.RoadA;
+                }
+                else if (curvedRoad.IsToggable)
+                {
+                    CurrentRoad = (curvedRoad.ToggleRotate) ? curvedRoad.RoadB1 : curvedRoad.RoadB2;
+                }
+                else
+                {
+                    CurrentRoad = (PreviousRoad == curvedRoad.RoadA) ? ((curvedRoad.RoadB1 != null) ? curvedRoad.RoadB1 : curvedRoad.RoadB2) : curvedRoad.RoadA;
+                }
+            }
             PreviousRoad = tempRoad;
         }
     }

@@ -1,8 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Road : MonoBehaviour
 {
-    public Road RoadA, RoadB;
     public Transform Node;
-    public bool IsCurved;
+    public RoadType Type;
+}
+
+public enum RoadType
+{
+    Straight,
+    Curved
 }
