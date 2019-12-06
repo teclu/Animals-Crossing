@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathCount: {fileID: 0}
+  TimerCountDown: {fileID: 0}
+  TimerCountDownValue: 90

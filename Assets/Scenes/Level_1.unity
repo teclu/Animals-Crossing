@@ -6113,6 +6113,11 @@ PrefabInstance:
       propertyPath: DeathCount
       value: 
       objectReference: {fileID: 968810935}
+    - target: {fileID: 3994087121952168833, guid: 7584b856e7ad38bd4863d0af745fd0a7,
+        type: 3}
+      propertyPath: TimerCountDown
+      value: 
+      objectReference: {fileID: 8336131269754350896}
     - target: {fileID: 3994087121952168834, guid: 7584b856e7ad38bd4863d0af745fd0a7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6289,6 +6294,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae5475c69de35ba19aeff98e7bfad891, type: 3}
+--- !u!114 &8336131269754350896 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908864635943256599, guid: ae5475c69de35ba19aeff98e7bfad891,
+    type: 3}
+  m_PrefabInstance: {fileID: 8336131269754350895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8688839589168972732
 PrefabInstance:
   m_ObjectHideFlags: 0
