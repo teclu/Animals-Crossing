@@ -1,0 +1,52 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using TMPro;
+
+public class ButtonHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+{
+    public AudioSource ButtonHoverSound, ButtonClickSound;
+    private TextMeshProUGUI buttonText;
+
+    private void Start()
+    {
+        ButtonHoverSound = Instantiate(ButtonHoverSound, transform);
+        ButtonClickSound = Instantiate(ButtonClickSound, transform);
+        buttonText = GetComponentInChildren<TextMeshProUGUI>();
+        buttonText.color = Color.yellow;
+    }
+
+    private void OnEnable()
+    {
+        if (buttonText == null)
+        {
+            buttonText = GetComponentInChildren<TextMeshProUGUI>();
+        }
+        buttonText.color = Color.yellow;
+    }
+
+    private void OnDisable()
+    {
+        buttonText.color = Color.yellow;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+
+        buttonText.color = Color.gray;
+        ButtonHoverSound.Play();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        buttonText.color = Color.yellow;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("?");
+        buttonText.color = Color.gray;
+        ButtonClickSound.Play();
+    }
+}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2703377708621599837}
   - component: {fileID: 7642561762430082895}
   - component: {fileID: 5205603458957826789}
+  - component: {fileID: 6668862936440242405}
   m_Layer: 5
   m_Name: Next Level Button
   m_TagString: Untagged
@@ -60,12 +61,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -129,6 +130,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6668862936440242405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955267041410822981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e5d60c701a526bda098e657d0def84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonHoverSound: {fileID: 6173962557296627541, guid: 1d4218444cfe71a6bb2b1760158814ab,
+    type: 3}
+  ButtonClickSound: {fileID: 6173962557296627541, guid: 7e0546f29efce9f379110ed6dc55e8bb,
+    type: 3}
 --- !u!1 &2084832421485114635
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +379,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278255103
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
