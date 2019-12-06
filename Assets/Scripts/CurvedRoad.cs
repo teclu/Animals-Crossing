@@ -12,6 +12,11 @@ public class CurvedRoad : Road
     {
         Type = RoadType.Curved;
         ToggleSprite.SetActive(IsToggable);
+        if (ToggleRotate)
+        {
+            RoadSprite.transform.Rotate(Vector3.forward, (ToggleRotate) ? -90.0f : 90.0f);
+            Node.transform.Rotate(Vector3.forward, (ToggleRotate) ? -180.0f : 180.0f);
+        }
     }
 
     public void OnClick()

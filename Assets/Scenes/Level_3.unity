@@ -1326,7 +1326,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoadB1
       value: 
-      objectReference: {fileID: 177885701}
+      objectReference: {fileID: 0}
     - target: {fileID: 1981815438413766908, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
       propertyPath: IsToggable
@@ -1702,7 +1702,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoadB2
       value: 
-      objectReference: {fileID: 1387051077}
+      objectReference: {fileID: 0}
     - target: {fileID: 1981815438413766908, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
       propertyPath: RoadA
@@ -1717,6 +1717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: IsToggable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981815438413766908, guid: c7386909caa279f6bb7fff791ad5a82f,
+        type: 3}
+      propertyPath: ToggleRotate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4936654418930762556, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
@@ -2920,7 +2925,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoadB2
       value: 
-      objectReference: {fileID: 6453645}
+      objectReference: {fileID: 0}
     - target: {fileID: 1981815438413766908, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
       propertyPath: RoadA
@@ -2935,6 +2940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: IsToggable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981815438413766908, guid: c7386909caa279f6bb7fff791ad5a82f,
+        type: 3}
+      propertyPath: ToggleRotate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4936654418930762556, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
@@ -5837,7 +5847,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoadB2
       value: 
-      objectReference: {fileID: 373460590}
+      objectReference: {fileID: 936733776}
     - target: {fileID: 1981815438413766908, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
       propertyPath: RoadA
@@ -5847,7 +5857,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoadB1
       value: 
-      objectReference: {fileID: 936733776}
+      objectReference: {fileID: 373460590}
     - target: {fileID: 1981815438413766908, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
       propertyPath: IsToggable
