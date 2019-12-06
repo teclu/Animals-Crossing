@@ -12,5 +12,6 @@ public enum RoadType
 {
     Straight,
     Curved,
-    Merge
+    Merge,
+    Slip
 }

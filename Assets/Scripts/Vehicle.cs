@@ -69,8 +69,13 @@ public class Vehicle : MonoBehaviour
             }
             else if (CurrentRoad.Type == RoadType.Merge)
             {
-                MergeRoad mergeRoad = (MergeRoad)CurrentRoad;
+                MergeRoad mergeRoad = (MergeRoad) CurrentRoad;
                 CurrentRoad = (PreviousRoad == mergeRoad.RoadA1 || PreviousRoad == mergeRoad.RoadA2) ? mergeRoad.RoadB : mergeRoad.RoadA1;
+            }
+            else if (CurrentRoad.Type == RoadType.Slip)
+            {
+                SlipRoad slipRoad = (SlipRoad) CurrentRoad;
+                CurrentRoad = (slipRoad.ToggleRotate) ? slipRoad.RoadB1 : slipRoad.RoadB2;
             }
             PreviousRoad = tempRoad;
         }
