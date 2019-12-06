@@ -16,7 +16,7 @@ public class SlipRoad : Road
         if (ToggleRotate)
         {
             RoadSprite.GetComponent<Image>().sprite = RoadSprites[0];
-            Node.transform.Rotate(Vector3.forward, (ToggleRotate) ? 90.0f : -90.0f);
+            Node.transform.Rotate(Vector3.forward, (ToggleRotate) ? 90.0f * transform.localScale.x : -90.0f * transform.localScale.x);
         }
     }
 
@@ -25,6 +25,6 @@ public class SlipRoad : Road
         ToggleRotate = !ToggleRotate;
         RoadSprite.GetComponent<Image>().sprite = RoadSprites[(ToggleRotate) ? 1 : 0];
         RoadSprite.transform.Rotate(Vector3.forward, (ToggleRotate) ? 90.0f : -90.0f);
-        Node.transform.Rotate(Vector3.forward, (ToggleRotate) ? 90.0f : -90.0f);
+        Node.transform.Rotate(Vector3.forward, (ToggleRotate) ? 90.0f * transform.localScale.x : -90.0f * transform.localScale.x);
     }
 }
