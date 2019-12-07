@@ -9,6 +9,7 @@ public class GameLevelManager : MonoBehaviour
     public TextMeshProUGUI DeathCount;
     public TextMeshProUGUI TimerCountDown;
     public GameObject NextLevelButton;
+    public AudioSource NextLevelSound;
 
     public float TimerCountDownValue;
     public int NextLevelNumber = -1;
@@ -19,6 +20,7 @@ public class GameLevelManager : MonoBehaviour
         DeathCount.text = "Deaths: 0";
         TimerCountDown.text = "Time Left: " + (int) TimerCountDownValue;
         NextLevelButton.SetActive(false);
+        NextLevelSound = Instantiate(NextLevelSound, transform);
     }
 
     private void OnEnable()
@@ -64,6 +66,7 @@ public class GameLevelManager : MonoBehaviour
                 if (NextLevelNumber > 0)
                 {
                     NextLevelButton.SetActive(true);
+                    NextLevelSound.Play();
                 }
             }
         }

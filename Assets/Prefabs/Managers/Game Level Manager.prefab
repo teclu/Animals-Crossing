@@ -45,4 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathCount: {fileID: 0}
   TimerCountDown: {fileID: 0}
+  NextLevelButton: {fileID: 0}
+  NextLevelSound: {fileID: 890178946427942952, guid: 9f495853af523f4c281a00526efaab08,
+    type: 3}
   TimerCountDownValue: 90
+  NextLevelNumber: -1
