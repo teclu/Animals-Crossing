@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 120045405232844243}
   - component: {fileID: 722537610202101262}
   - component: {fileID: 6892876056334685886}
+  - component: {fileID: 227745525533050393}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -554,12 +555,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7971698, b: 0.8901889, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a6e1b964a157a732098336ca3084dda7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -639,6 +640,20 @@ MonoBehaviour:
     type: 3}
   ButtonClickSound: {fileID: 6173962557296627541, guid: 7e0546f29efce9f379110ed6dc55e8bb,
     type: 3}
+--- !u!114 &227745525533050393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3568675049360909656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc5b4d2fb55a523e841e363e56b5fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonUp: {fileID: 21300000, guid: a6e1b964a157a732098336ca3084dda7, type: 3}
+  ButtonDown: {fileID: 21300000, guid: c716b24e64a09041fa31f11af1ac2113, type: 3}
 --- !u!1 &3652708705728232292
 GameObject:
   m_ObjectHideFlags: 0
