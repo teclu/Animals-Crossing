@@ -1161,14 +1161,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<size=150%>Team SanBaiKuai</size>
 
-    Stanley Tay
+    Alex Ang
 
     Koh Lewis
 
-    Alex
-    Ang
+    Kyle
+    Chu
 
-    Kyle Chu'
+    Stanley Tay'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 943a69012d8f35b26bfc688058eddf7f, type: 2}
   m_sharedMaterial: {fileID: 2318215856878887500, guid: 943a69012d8f35b26bfc688058eddf7f,
