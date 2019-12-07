@@ -2186,6 +2186,21 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6122745393429709483, guid: c7386909caa279f6bb7fff791ad5a82f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122745393429709483, guid: c7386909caa279f6bb7fff791ad5a82f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122745393429709483, guid: c7386909caa279f6bb7fff791ad5a82f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6845715949148746310, guid: c7386909caa279f6bb7fff791ad5a82f,
         type: 3}
       propertyPath: m_Name
