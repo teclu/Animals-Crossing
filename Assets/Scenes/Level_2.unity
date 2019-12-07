@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7328,7 +7328,7 @@ PrefabInstance:
     - target: {fileID: 3677750422499707710, guid: b43f03c9d30c8772287661432cdc1e58,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3677750422499707710, guid: b43f03c9d30c8772287661432cdc1e58,
         type: 3}
@@ -9317,6 +9317,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1979126054}
     m_Modifications:
+    - target: {fileID: 2908864635943256599, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 943a69012d8f35b26bfc688058eddf7f,
+        type: 2}
+    - target: {fileID: 4427978311659890745, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 943a69012d8f35b26bfc688058eddf7f,
+        type: 2}
+    - target: {fileID: 4427978311659890745, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5205603458957826789, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -9330,28 +9347,34 @@ PrefabInstance:
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 943a69012d8f35b26bfc688058eddf7f,
+        type: 2}
     - target: {fileID: 8336131271095945715, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_LocalPosition.x

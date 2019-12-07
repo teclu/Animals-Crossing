@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4155,6 +4155,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1979126054}
     m_Modifications:
+    - target: {fileID: 3677750422362077996, guid: b43f03c9d30c8772287661432cdc1e58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3677750422499707709, guid: b43f03c9d30c8772287661432cdc1e58,
         type: 3}
       propertyPath: m_Name
@@ -4269,6 +4274,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677750422581809312, guid: b43f03c9d30c8772287661432cdc1e58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677750423141224389, guid: b43f03c9d30c8772287661432cdc1e58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677750423852230998, guid: b43f03c9d30c8772287661432cdc1e58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677750424343348055, guid: b43f03c9d30c8772287661432cdc1e58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b43f03c9d30c8772287661432cdc1e58, type: 3}
@@ -6700,6 +6725,11 @@ PrefabInstance:
       propertyPath: TimerCountDownValue
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 3994087121952168833, guid: 7584b856e7ad38bd4863d0af745fd0a7,
+        type: 3}
+      propertyPath: NextLevelButton
+      value: 
+      objectReference: {fileID: 1562976014}
     - target: {fileID: 3994087121952168834, guid: 7584b856e7ad38bd4863d0af745fd0a7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7396,6 +7426,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1979126054}
     m_Modifications:
+    - target: {fileID: 2908864635943256599, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 943a69012d8f35b26bfc688058eddf7f,
+        type: 2}
+    - target: {fileID: 4427978311659890745, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 943a69012d8f35b26bfc688058eddf7f,
+        type: 2}
+    - target: {fileID: 4427978311659890745, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5205603458957826789, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7409,28 +7456,34 @@ PrefabInstance:
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8336131269893360792, guid: ae5475c69de35ba19aeff98e7bfad891,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 943a69012d8f35b26bfc688058eddf7f,
+        type: 2}
     - target: {fileID: 8336131271095945715, guid: ae5475c69de35ba19aeff98e7bfad891,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7578,6 +7631,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1562976014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1955267041410822981, guid: ae5475c69de35ba19aeff98e7bfad891,
+    type: 3}
+  m_PrefabInstance: {fileID: 1562976010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1595853586
 PrefabInstance:
   m_ObjectHideFlags: 0
